@@ -6,7 +6,7 @@ const Services: React.FC = () => {
   return (
     <div className="bg-white">
       {/* Page Header */}
-      <div className="bg-gray-50 py-16 border-b">
+      <div className="bg-gray-50 pt-32 pb-16 border-b">
         <div className="max-w-7xl mx-auto px-4 text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-4 tracking-tight">Expert House Design Services in Bangladesh</h1>
           <p className="text-gray-600 max-w-2xl mx-auto text-lg leading-relaxed">

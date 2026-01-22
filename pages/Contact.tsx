@@ -25,7 +25,7 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <div className="bg-gray-50 min-h-screen">
+    <div className="bg-gray-50 min-h-screen pt-24">
       <div className="max-w-7xl mx-auto px-4 py-20 grid grid-cols-1 lg:grid-cols-2 gap-16">
         {/* Contact Info */}
         <div className="space-y-10">

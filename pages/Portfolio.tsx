@@ -8,7 +8,11 @@ const Portfolio: React.FC = () => {
       {/* Header */}
       <div className="bg-gray-900 text-white pt-32 pb-24 px-4 relative overflow-hidden">
         <div className="absolute inset-0 opacity-20">
-          <img src="https://images.unsplash.com/photo-1480074568708-e7b720bb3f09?auto=format&fit=crop&w=1920&q=80" alt="Background" className="w-full h-full object-cover" />
+          <img 
+            src="https://images.unsplash.com/photo-1480074568708-e7b720bb3f09?auto=format&fit=crop&w=1920&q=80" 
+            alt="Background" 
+            className="w-full h-full object-cover"
+          />
         </div>
         <div className="max-w-7xl mx-auto text-center relative z-10">
           <h1 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight">Our Master Portfolio</h1>
@@ -45,8 +49,13 @@ const Portfolio: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
           {PORTFOLIO.map((item) => (
             <div key={item.id} className="group bg-white rounded-[40px] overflow-hidden shadow-lg border border-gray-50 flex flex-col transition-all hover:shadow-2xl">
-              <div className="relative overflow-hidden h-72">
-                <img src={item.image} alt={item.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+              <div className="relative overflow-hidden h-72 bg-gray-100">
+                <img 
+                  src={item.image} 
+                  alt={item.title} 
+                  loading="lazy"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" 
+                />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
                    <div className="text-white text-xs font-bold uppercase tracking-widest">
                      Click for details
@@ -93,10 +102,11 @@ const Portfolio: React.FC = () => {
             {EXTERIOR_VISUALIZATIONS.map((viz, idx) => (
               <div key={viz.id} className={`flex flex-col lg:flex-row gap-12 items-center ${idx % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}>
                 <div className="lg:w-2/3 relative group">
-                  <div className="overflow-hidden rounded-3xl shadow-2xl">
+                  <div className="overflow-hidden rounded-3xl shadow-2xl bg-gray-800">
                     <img 
                       src={viz.image} 
                       alt={viz.title} 
+                      loading="lazy"
                       className="w-full h-[500px] object-cover transition-transform duration-[2s] group-hover:scale-105"
                     />
                   </div>
