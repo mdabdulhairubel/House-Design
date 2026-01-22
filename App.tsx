@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import Header from './components/Header';
@@ -16,28 +15,42 @@ const App: React.FC = () => {
   // Dynamic SEO Metadata management
   useEffect(() => {
     const metaDescriptions: Record<string, string> = {
-      '/': 'Professional house design in Bangladesh. Expert modern home plans, duplex designs, and 3D floor plan services tailored for Dhaka, Chattogram and Sylhet.',
-      '/services': 'Our architectural services in Bangladesh include residential house plans, luxury duplex designs, and high-end 3D interior/exterior visualizations.',
-      '/portfolio': 'Browse our 3D exterior visualizations and architectural renderings of modern house designs in Bangladesh. High-quality duplex and residential project portfolio for Bangladeshi landowners.',
-      '/about': 'House Design BD is a leading architectural firm in Bangladesh. Learn about our expert team dedicated to modern and sustainable home design.',
-      '/contact': 'Get a free house design quote today. Contact the best architects in Bangladesh for residential plans, duplexes, and site consultations.'
+      '/': 'Professional house design in Bangladesh. Expert modern home plans, duplex designs, and low cost house design in BD. Expert architects for Dhaka, Chattogram and Sylhet.',
+      '/services': 'Modern house design services in Bangladesh: 3 bedroom house plans, luxury duplex designs, 1200 sq ft house plans, and 3D architectural rendering.',
+      '/portfolio': 'Portfolio of modern house designs in Bangladesh. 3D exterior visualizations, duplex house plans, and completed residential projects nationwide.',
+      '/about': 'House Design BD is a leading architectural firm in Bangladesh. Specializing in low cost house design and modern residential planning for over 10 years.',
+      '/contact': 'Get a free house design quote in Bangladesh. Contact us for 3 bedroom plans, duplex designs, and home blueprints today.'
     };
 
     const titles: Record<string, string> = {
-      '/': 'House Design Services in Bangladesh | Modern Home Plans & Duplex',
-      '/services': 'Residential House Design Services in Bangladesh - Duplex & 3D Plans',
-      '/portfolio': '3D Exterior Visualizations & Modern House Portfolio | House Design BD',
-      '/about': 'About House Design BD - Leading Architects in Bangladesh',
-      '/contact': 'Get a House Design Quote in Bangladesh - Contact Us'
+      '/': 'House Design Services in Bangladesh | Modern & Low Cost Home Plans',
+      '/services': '3 Bedroom House Plans & Duplex House Design BD | Services',
+      '/portfolio': 'Portfolio: 3D House Visualizations & Modern House Design Bangladesh',
+      '/about': 'About Us | Best Architects for House Design in Bangladesh',
+      '/contact': 'Get a Quote | Best House Plan Design in Bangladesh'
     };
 
+    const currentTitle = titles[pathname] || 'House Design BD | Professional Architecture in Bangladesh';
+    const currentDescription = metaDescriptions[pathname] || metaDescriptions['/'];
+
     // Update Title
-    document.title = titles[pathname] || 'House Design BD | Professional Architecture in Bangladesh';
+    document.title = currentTitle;
 
     // Update Meta Description
     const metaDescriptionTag = document.querySelector('meta[name="description"]');
     if (metaDescriptionTag) {
-      metaDescriptionTag.setAttribute('content', metaDescriptions[pathname] || metaDescriptions['/']);
+      metaDescriptionTag.setAttribute('content', currentDescription);
+    }
+
+    // Update Open Graph tags
+    const ogTitleTag = document.querySelector('meta[property="og:title"]');
+    if (ogTitleTag) {
+      ogTitleTag.setAttribute('content', currentTitle);
+    }
+
+    const ogDescTag = document.querySelector('meta[property="og:description"]');
+    if (ogDescTag) {
+      ogDescTag.setAttribute('content', currentDescription);
     }
 
     // Scroll to top

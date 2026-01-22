@@ -10,7 +10,7 @@ const Portfolio: React.FC = () => {
         <div className="absolute inset-0 opacity-20">
           <img 
             src="https://images.unsplash.com/photo-1480074568708-e7b720bb3f09?auto=format&fit=crop&w=1920&q=80" 
-            alt="Background" 
+            alt="Modern Architectural Projects and House Design in Bangladesh - Master Portfolio" 
             className="w-full h-full object-cover"
           />
         </div>
@@ -22,7 +22,7 @@ const Portfolio: React.FC = () => {
         </div>
       </div>
 
-      {/* Stats Counter (Realistic feel) */}
+      {/* Stats Counter */}
       <div className="max-w-7xl mx-auto px-4 -mt-10 relative z-20">
         <div className="bg-white shadow-2xl rounded-3xl p-8 grid grid-cols-1 md:grid-cols-3 gap-8 text-center border border-gray-100">
            <div>
@@ -40,11 +40,12 @@ const Portfolio: React.FC = () => {
         </div>
       </div>
 
-      {/* Main Portfolio Grid */}
+      {/* Completed Projects Section */}
       <section className="py-24 px-4 max-w-7xl mx-auto">
         <div className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-2">Completed Projects</h2>
-          <div className="w-20 h-1 bg-blue-600"></div>
+          <h2 className="text-blue-600 font-black uppercase tracking-widest text-xs mb-4">Real Estate Development</h2>
+          <h3 className="text-3xl md:text-5xl font-bold text-gray-900 mb-2">Completed Masterpieces</h3>
+          <div className="w-20 h-1.5 bg-blue-600 mt-6 rounded-full"></div>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
           {PORTFOLIO.map((item) => (
@@ -52,15 +53,10 @@ const Portfolio: React.FC = () => {
               <div className="relative overflow-hidden h-72 bg-gray-100">
                 <img 
                   src={item.image} 
-                  alt={item.title} 
+                  alt={`${item.title} - Modern House Design in ${item.location}, Bangladesh`} 
                   loading="lazy"
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" 
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
-                   <div className="text-white text-xs font-bold uppercase tracking-widest">
-                     Click for details
-                   </div>
-                </div>
               </div>
               <div className="p-8 flex-grow flex flex-col">
                 <div className="flex items-center justify-between mb-4">
@@ -86,78 +82,83 @@ const Portfolio: React.FC = () => {
         </div>
       </section>
 
-      {/* NEW SECTION: 3D Exterior Visualizations */}
-      <section className="py-24 px-4 bg-gray-900 text-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold mb-6">3D Exterior Visualizations</h2>
-            <p className="text-gray-400 max-w-3xl mx-auto text-lg leading-relaxed font-light">
-              Experience the future of Bangladeshi architecture with our hyper-realistic 3D renderings. 
-              We utilize advanced lighting, global illumination, and high-fidelity material mapping to show you 
-              every detail of your home under realistic day and night conditions.
+      {/* 3D EXTERIOR VISUALIZATION SECTION - GRID RE-IMPLEMENTATION */}
+      <section className="py-32 px-4 bg-slate-950 text-white relative overflow-hidden">
+        {/* Decorative elements for distinction */}
+        <div className="absolute top-0 left-0 w-96 h-96 bg-blue-900/10 rounded-full -translate-x-1/2 -translate-y-1/2 blur-[120px]"></div>
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-blue-900/10 rounded-full translate-x-1/2 translate-y-1/2 blur-[120px]"></div>
+        
+        <div className="max-w-7xl mx-auto relative z-10">
+          <div className="text-center mb-24">
+            <h2 className="text-blue-500 font-black uppercase tracking-[0.3em] text-xs mb-6">Photorealistic Experience</h2>
+            <h3 className="text-4xl md:text-6xl font-bold mb-8 tracking-tight">Cinematic 3D Visualizations</h3>
+            <p className="text-slate-400 max-w-3xl mx-auto text-lg md:text-xl leading-relaxed font-light">
+              Experience the future of Bangladeshi architecture with hyper-realistic 4K renderings. 
+              We utilize advanced ray-tracing, PBR materials, and photometric lighting to showcase your 
+              home under various atmospheric conditions.
             </p>
           </div>
 
-          <div className="space-y-16">
-            {EXTERIOR_VISUALIZATIONS.map((viz, idx) => (
-              <div key={viz.id} className={`flex flex-col lg:flex-row gap-12 items-center ${idx % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}>
-                <div className="lg:w-2/3 relative group">
-                  <div className="overflow-hidden rounded-3xl shadow-2xl bg-gray-800">
-                    <img 
-                      src={viz.image} 
-                      alt={viz.title} 
-                      loading="lazy"
-                      className="w-full h-[500px] object-cover transition-transform duration-[2s] group-hover:scale-105"
-                    />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            {EXTERIOR_VISUALIZATIONS.map((viz) => (
+              <div key={viz.id} className="group bg-white/5 rounded-[32px] overflow-hidden border border-white/10 hover:border-blue-500/50 transition-all duration-500 flex flex-col">
+                <div className="relative h-72 overflow-hidden">
+                  <img 
+                    src={viz.image} 
+                    alt={`${viz.title} - 3D Exterior Visualization of Modern House Design Bangladesh`} 
+                    className="w-full h-full object-cover transition-transform duration-[1.5s] group-hover:scale-110"
+                  />
+                  {/* Time of Day Badge */}
+                  <div className="absolute top-4 left-4 bg-black/60 backdrop-blur-md px-4 py-1.5 rounded-full text-[10px] font-black uppercase tracking-widest text-blue-400 border border-white/10">
+                    {viz.timeOfDay || 'Architectural View'}
                   </div>
-                  <div className="absolute top-6 right-6 bg-blue-600 px-4 py-2 rounded-full text-xs font-black uppercase tracking-widest shadow-xl">
-                    4K Realistic Rendering
-                  </div>
+                  {/* Overlay for realism details */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-60"></div>
                 </div>
-                <div className="lg:w-1/3 text-left">
-                  <h3 className="text-3xl font-bold mb-6 text-blue-400">{viz.title}</h3>
-                  <p className="text-gray-400 text-lg mb-8 leading-relaxed italic">
+                <div className="p-8 flex-grow flex flex-col">
+                  <h4 className="text-xl font-bold mb-4 text-white group-hover:text-blue-400 transition-colors">{viz.title}</h4>
+                  <p className="text-slate-400 text-sm leading-relaxed mb-8 flex-grow">
                     {viz.details}
                   </p>
-                  <ul className="space-y-4 mb-10 text-gray-300">
-                    <li className="flex items-center gap-3">
-                      <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
-                      Photometric Lighting Analysis
-                    </li>
-                    <li className="flex items-center gap-3">
-                      <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
-                      High-Definition Texture Mapping
-                    </li>
-                    <li className="flex items-center gap-3">
-                      <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
-                      Environment & Landscape Integration
-                    </li>
-                  </ul>
-                  <a 
-                    href={`https://wa.me/88${WHATSAPP_NUMBER}?text=I%20am%20interested%20in%203D%20Exterior%20Visualizations.`}
-                    className="inline-block bg-white text-gray-900 px-8 py-4 rounded-full font-bold hover:bg-blue-600 hover:text-white transition-all shadow-xl"
-                  >
-                    Request 3D Sample
-                  </a>
+                  <div className="flex items-center justify-between mt-auto pt-6 border-t border-white/10">
+                    <span className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">4K Rendering</span>
+                    <a 
+                      href={`https://wa.me/88${WHATSAPP_NUMBER}?text=I%20want%20to%20see%20more%203D%20renders%20like%20${viz.title}`}
+                      className="text-blue-500 hover:text-white text-xs font-bold uppercase tracking-widest flex items-center gap-2 transition-all"
+                    >
+                      Enlarge <span className="text-lg">⊕</span>
+                    </a>
+                  </div>
                 </div>
               </div>
             ))}
           </div>
+
+          <div className="mt-24 text-center">
+            <div className="inline-block p-1 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-full">
+              <a 
+                href={`https://wa.me/88${WHATSAPP_NUMBER}?text=I%20want%20to%20order%20a%20full%203D%20visualization%20package.`}
+                className="block bg-slate-950 text-white px-12 py-5 rounded-full font-bold text-lg hover:bg-transparent transition-all"
+              >
+                Request Custom 3D Package
+              </a>
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* SEO Content */}
+      {/* SEO/Architectural Awareness */}
       <section className="bg-gray-50 py-24 px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-8">Professional Architects in Bangladesh</h2>
+          <h2 className="text-3xl font-bold mb-8 text-slate-900">Why Architecture Matters in Bangladesh</h2>
           <p className="text-gray-600 text-lg leading-relaxed mb-10">
-            Our portfolio isn't just a collection of pictures; it's a testament to the safety, durability, and aesthetics of homes across Bangladesh. At {BUSINESS_NAME}, we take pride in being one of the top-rated <strong>house design services in Bangladesh</strong>.
+            Our portfolio isn't just a collection of pictures; it's a testament to the safety, durability, and aesthetics of homes across Bangladesh. At {BUSINESS_NAME}, we take pride in being one of the top-rated <strong>house design services in Bangladesh</strong>. We ensure every line drawn translates into a secure, beautiful legacy for your family.
           </p>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-xs font-bold text-gray-400 uppercase tracking-widest">
-            <span>Modern Homes</span>
-            <span>Duplex Specialist</span>
-            <span>Structural Experts</span>
-            <span>3D Visualization</span>
+          <div className="flex flex-wrap justify-center gap-6 text-[10px] font-black text-slate-400 uppercase tracking-[0.2em]">
+            <span className="bg-white px-6 py-3 rounded-full shadow-sm border border-gray-100">Modern Architecture</span>
+            <span className="bg-white px-6 py-3 rounded-full shadow-sm border border-gray-100">Duplex Specialist</span>
+            <span className="bg-white px-6 py-3 rounded-full shadow-sm border border-gray-100">Structural Safety</span>
+            <span className="bg-white px-6 py-3 rounded-full shadow-sm border border-gray-100">3D Visualization</span>
           </div>
         </div>
       </section>

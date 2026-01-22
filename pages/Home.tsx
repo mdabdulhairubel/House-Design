@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { SERVICES, PORTFOLIO, TESTIMONIALS, WHATSAPP_NUMBER, BUSINESS_NAME } from '../constants';
@@ -11,7 +10,7 @@ const Home: React.FC = () => {
         <div className="absolute inset-0 z-0">
           <img 
             src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1920&q=80" 
-            alt="Modern Duplex House Design Render in Bangladesh" 
+            alt="Modern Duplex House Design in Bangladesh - High Resolution Render" 
             className="w-full h-full object-cover brightness-[0.5]"
           />
           <div className="absolute inset-0 hero-gradient"></div>
@@ -21,7 +20,7 @@ const Home: React.FC = () => {
             Expert <span className="text-blue-400">House Design</span> in Bangladesh
           </h1>
           <p className="text-lg md:text-2xl mb-12 opacity-95 max-w-3xl mx-auto font-light">
-            Professional home design solutions for the Bangladeshi lifestyle. Specializing in Duplex House Plans, Modern Residential Buildings, and 3D Architecture across all major cities.
+            Premium home plans, luxury duplex designs, and low cost house design in Bangladesh. Specializing in 1200 sq ft house plans and modern 3 bedroom house designs.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-6">
             <Link to="/contact" className="bg-blue-600 hover:bg-blue-700 text-white px-10 py-5 rounded-full font-bold text-lg transition-all shadow-2xl hover:scale-105 active:scale-95">
@@ -31,25 +30,6 @@ const Home: React.FC = () => {
               WhatsApp Consult
             </a>
           </div>
-          <div className="mt-12 flex flex-wrap justify-center items-center gap-8 text-sm opacity-80 uppercase tracking-[0.2em]">
-            <span>Dhaka Architects</span>
-            <span className="w-1.5 h-1.5 bg-blue-500 rounded-full"></span>
-            <span>Chattogram Designs</span>
-            <span className="w-1.5 h-1.5 bg-blue-500 rounded-full"></span>
-            <span>Sylhet Projects</span>
-            <span className="w-1.5 h-1.5 bg-blue-500 rounded-full"></span>
-            <span>Rajshahi Planning</span>
-          </div>
-        </div>
-      </section>
-
-      {/* Trust Bar */}
-      <section className="bg-white py-10 border-b">
-        <div className="max-w-7xl mx-auto px-4 flex flex-wrap justify-around items-center gap-8 text-gray-400 font-semibold grayscale opacity-70">
-           <span className="text-xl">RAJUK APPROVED</span>
-           <span className="text-xl">CDA COMPLIANT</span>
-           <span className="text-xl">KDA CERTIFIED</span>
-           <span className="text-xl">MODERN ARCHITECTURE</span>
         </div>
       </section>
 
@@ -57,22 +37,19 @@ const Home: React.FC = () => {
       <section className="py-24 bg-white" id="services">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-20">
-            <h2 className="text-blue-600 font-bold uppercase tracking-widest text-sm mb-4">Our Specialized Expertise</h2>
+            <h2 className="text-blue-600 font-bold uppercase tracking-widest text-sm mb-4">Leading Architects in Bangladesh</h2>
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6 tracking-tight">Best House Plan Design in Bangladesh</h2>
-            <p className="text-gray-500 max-w-2xl mx-auto text-lg leading-relaxed">Whether it's a small urban home or a luxury duplex estate, we provide the most detailed architectural blueprints optimized for Bangladesh's climate and land size.</p>
+            <p className="text-gray-500 max-w-2xl mx-auto text-lg leading-relaxed">From modern 3 bedroom house designs to luxury duplexes, we provide architectural excellence for every budget.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {SERVICES.map((service) => (
               <article key={service.id} className="group p-2 bg-white rounded-3xl transition-all border border-gray-100 hover:shadow-2xl">
                 <div className="mb-6 overflow-hidden rounded-2xl h-56">
-                  <img src={service.image} alt={`${service.title} in Bangladesh`} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                  <img src={service.image} alt={`${service.title} - Best Architecture in BD`} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
                 </div>
                 <div className="px-4 pb-6">
                   <h3 className="text-xl font-bold mb-3 text-gray-900">{service.title}</h3>
                   <p className="text-gray-600 text-sm mb-5 leading-relaxed line-clamp-3">{service.description}</p>
-                  <Link to="/services" className="text-blue-600 font-bold text-sm inline-flex items-center gap-2 hover:translate-x-1 transition-transform">
-                    View Service Details <span>&rarr;</span>
-                  </Link>
                 </div>
               </article>
             ))}
@@ -80,95 +57,55 @@ const Home: React.FC = () => {
         </div>
       </section>
 
-      {/* SEO Section: Bangladeshi Lifestyle */}
-      <section className="py-24 bg-gray-50">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-           <h2 className="text-3xl font-bold mb-8">Modern House Design for Bangladeshi Cities</h2>
-           <p className="text-gray-600 text-lg leading-relaxed mb-6">
-             In Bangladesh, land is a precious resource. Our design philosophy focuses on maximizing <strong>natural light and cross-ventilation</strong>, essential for the tropical humidity of Dhaka and Chattogram. We specialize in <strong>2-katha, 3-katha, and 5-katha house plans</strong> that provide luxurious living within tight urban spaces.
-           </p>
-           <p className="text-gray-600 text-lg leading-relaxed">
-             Our structural engineers ensure every building is earthquake-resistant and adheres to <strong>BNBC standards</strong>, giving you peace of mind for generations to come.
-           </p>
-        </div>
-      </section>
-
-      {/* Featured Portfolio */}
-      <section className="py-24 bg-white border-t">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
-            <div className="max-w-xl">
-              <h2 className="text-blue-600 font-bold uppercase tracking-widest text-sm mb-4">Our Design Masterpieces</h2>
-              <h3 className="text-3xl md:text-5xl font-bold text-gray-900 tracking-tight">Recent Projects in Bangladesh</h3>
-            </div>
-            <Link to="/portfolio" className="bg-white border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-full font-bold hover:bg-blue-600 hover:text-white transition-all">
-              Browse Design Portfolio
-            </Link>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-            {PORTFOLIO.slice(0, 3).map((item) => (
-              <div key={item.id} className="group relative overflow-hidden rounded-3xl h-[500px] shadow-xl">
-                <img src={item.image} alt={`Luxury ${item.title} in ${item.location}, BD`} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent opacity-90"></div>
-                <div className="absolute inset-0 flex flex-col justify-end p-8">
-                  <div className="mb-2 inline-block self-start bg-blue-600/80 backdrop-blur-md text-white text-[10px] px-3 py-1 rounded-full font-bold uppercase tracking-[0.2em]">
-                    {item.location}
-                  </div>
-                  <h4 className="text-white text-2xl font-bold mb-2">{item.title}</h4>
-                  <p className="text-gray-300 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500 leading-relaxed">
-                    {item.description}
-                  </p>
-                </div>
+      {/* SEO Content: Detailed Search Intent Mapping */}
+      <section className="py-24 bg-gray-50 border-y">
+        <div className="max-w-5xl mx-auto px-4">
+           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+              <div>
+                 <h2 className="text-3xl font-bold mb-8 text-slate-900 leading-tight">অল্প খরচে সুন্দর বাড়ির ডিজাইন ও ডুপ্লেক্স প্ল্যান</h2>
+                 <p className="text-gray-600 text-lg leading-relaxed mb-6">
+                   আমরা দিচ্ছি বাংলাদেশের প্রেক্ষাপটে সবচেয়ে আধুনিক ও <strong>অল্প খরচে সুন্দর বাড়ির ডিজাইন</strong>। আপনি যদি গ্রামে বা শহরে আপনার স্বপ্নর বাড়িটি তৈরি করতে চান, তবে আমাদের <strong>৩ বেডরুমের বাড়ির নকশা</strong> এবং ১২০০ স্কয়ার ফিট হাউজ প্ল্যানগুলো আপনার পছন্দ হবেই।
+                 </p>
+                 <ul className="space-y-4 text-slate-700">
+                    <li className="flex items-center gap-3">
+                       <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
+                       <span>ডুপ্লেক্স বাড়ির ডিজাইন (Duplex House Design BD)</span>
+                    </li>
+                    <li className="flex items-center gap-3">
+                       <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
+                       <span>একতলা বাড়ির ডিজাইন (Single Story House Plan)</span>
+                    </li>
+                    <li className="flex items-center gap-3">
+                       <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
+                       <span>আধুনিক ৩ বেডরুমের বাড়ির নকশা</span>
+                    </li>
+                 </ul>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonials */}
-      <section className="py-24 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-center text-3xl md:text-4xl font-bold mb-20 text-gray-900 tracking-tight">Trusted by Homeowners Across Bangladesh</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            {TESTIMONIALS.map((t) => (
-              <div key={t.id} className="bg-white p-10 rounded-[40px] border border-gray-100 relative group hover:shadow-2xl transition-all">
-                <div className="text-blue-600 opacity-10 absolute top-8 right-10">
-                  <svg className="w-24 h-24" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H15.017C14.4647 8 14.017 8.44772 14.017 9V11C14.017 11.5523 13.5693 12 13.017 12H11.017V21H14.017ZM5.017 21L5.017 18C5.017 16.8954 5.91243 16 7.017 16H10.017C10.5693 16 11.017 15.5523 11.017 15V9C11.017 8.44772 10.5693 8 10.017 8H6.017C5.46472 8 5.017 8.44772 5.017 9V11C5.017 11.5523 4.56929 12 4.017 12H2.017V21H5.017Z"/></svg>
-                </div>
-                <p className="text-xl text-gray-700 mb-8 leading-relaxed font-light italic">"{t.comment}"</p>
-                <div className="flex items-center gap-5">
-                  <div className="w-14 h-14 bg-gradient-to-tr from-blue-600 to-blue-400 rounded-2xl flex items-center justify-center text-white font-bold text-xl shadow-lg">
-                    {t.name.charAt(0)}
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-gray-900 text-lg">{t.name}</h4>
-                    <p className="text-sm text-blue-600 font-semibold">{t.location}, Bangladesh</p>
-                  </div>
-                </div>
+              <div className="bg-white p-8 rounded-[40px] shadow-xl border border-blue-50">
+                 <h3 className="text-xl font-bold mb-6 text-blue-900">Popular Search Categories</h3>
+                 <div className="flex flex-wrap gap-3">
+                    {["বাড়ির ডিজাইন", "House Design in Bangladesh", "Duplex House Design", "Low Cost House BD", "Village House Design", "3 Bedroom Plan", "1200 Sqft House", "Architect in Dhaka", "Modern Villa BD", "একতলা বাড়ির নকশা", "১০ লাখ টাকায় বাড়ি"].map((tag) => (
+                       <span key={tag} className="px-4 py-2 bg-gray-50 border border-gray-100 rounded-full text-xs font-bold text-gray-500 hover:text-blue-600 transition-colors">
+                          {tag}
+                       </span>
+                    ))}
+                 </div>
               </div>
-            ))}
-          </div>
+           </div>
         </div>
       </section>
 
-      {/* High-Conversion CTA */}
-      <section className="py-24 px-4 bg-white">
-        <div className="max-w-6xl mx-auto rounded-[60px] bg-blue-600 p-12 md:p-24 text-center text-white relative overflow-hidden shadow-2xl">
-          <div className="absolute top-0 right-0 w-80 h-80 bg-white/10 rounded-full -mr-40 -mt-40 blur-3xl"></div>
-          <div className="absolute bottom-0 left-0 w-80 h-80 bg-blue-400/20 rounded-full -ml-40 -mb-40 blur-3xl"></div>
-          
-          <h2 className="text-4xl md:text-6xl font-bold mb-8 tracking-tight relative z-10">Start Your Home Project in Bangladesh</h2>
-          <p className="text-xl md:text-2xl mb-12 opacity-90 max-w-2xl mx-auto font-light relative z-10">
-            Join the elite circle of Bangladeshi landowners who prioritized architecture before building. Your legacy begins with {BUSINESS_NAME}.
+      {/* Conversion Section */}
+      <section className="py-24 bg-white">
+        <div className="max-w-6xl mx-auto rounded-[60px] bg-slate-950 p-12 md:p-24 text-center text-white relative overflow-hidden shadow-2xl">
+          <div className="absolute top-0 right-0 w-80 h-80 bg-blue-600/20 rounded-full -mr-40 -mt-40 blur-3xl"></div>
+          <h2 className="text-4xl md:text-6xl font-bold mb-8 tracking-tight relative z-10">Start Your Dream Home Today</h2>
+          <p className="text-xl md:text-2xl mb-12 opacity-80 max-w-2xl mx-auto font-light relative z-10">
+            Expert architects for your modern house design in Bangladesh. Affordable, structural, and stunning.
           </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-6 relative z-10">
-            <Link to="/contact" className="bg-white text-blue-600 px-12 py-5 rounded-full font-bold text-xl hover:bg-gray-100 transition-all shadow-xl hover:-translate-y-1">
-              Get My Design Quote
-            </Link>
-            <a href={`https://wa.me/88${WHATSAPP_NUMBER}`} className="bg-transparent border-2 border-white/40 backdrop-blur-sm text-white px-12 py-5 rounded-full font-bold text-xl hover:bg-white hover:text-blue-600 transition-all shadow-xl hover:-translate-y-1">
-              Consult with Architect
-            </a>
-          </div>
+          <Link to="/contact" className="bg-blue-600 text-white px-12 py-5 rounded-full font-bold text-xl hover:bg-blue-700 transition-all shadow-xl relative z-10">
+            Request Free Quote
+          </Link>
         </div>
       </section>
     </main>
