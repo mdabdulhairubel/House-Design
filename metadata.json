@@ -1,0 +1,7 @@
+{
+  "name": "HouseDesign.bd - Premier House Design in Bangladesh",
+  "description": "Professional, high-conversion website for a Bangladesh-based architectural design firm specializing in residential house plans, duplex designs, and 3D visualization.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
