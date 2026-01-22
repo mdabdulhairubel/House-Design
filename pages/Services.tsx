@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { SERVICES, WHATSAPP_NUMBER } from '../constants';
 
@@ -21,7 +20,7 @@ const Services: React.FC = () => {
           <section key={service.id} id={service.slug} className={`flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} items-center gap-12`}>
             <div className="lg:w-1/2">
               <div className="relative">
-                <img src={service.image} alt={service.title} className="rounded-2xl shadow-2xl w-full h-[400px] object-cover" />
+                <img src={service.image} alt={`${service.title} - Modern Residential Planning BD`} className="rounded-2xl shadow-2xl w-full h-[400px] object-cover" />
                 <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-blue-100 -z-10 rounded-2xl hidden lg:block"></div>
               </div>
             </div>
@@ -61,16 +60,16 @@ const Services: React.FC = () => {
             Designing a home in Bangladesh requires more than just aesthetics. Our architectural team understands the local soil conditions, weather patterns (monsoon rain and humidity), and municipal regulations of major cities like <strong>Dhaka, Chattogram, and Rajshahi</strong>.
           </p>
           <p className="text-gray-700">
-            We specialize in <strong>modern house design in Bangladesh</strong> that optimizes small plot sizes like 2-katha or 3-katha without compromising on comfort or ventilation. Whether you need a <strong>duplex house design BD</strong> or a simple single-storey plan, we deliver detailed blueprints that any contractor can follow easily.
+            We specialize in <strong>modern house design in Bangladesh</strong> that optimizes small plot sizes like 2-katha or 3-katha without compromising on comfort or ventilation. Whether you need a <strong>duplex house design BD</strong>, a <strong>village house design</strong>, or a simple single-storey plan, we deliver detailed blueprints that any contractor can follow easily.
           </p>
           <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-8 not-prose">
              <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
                 <h4 className="font-bold text-blue-800 mb-2">Cost Optimization</h4>
-                <p className="text-sm text-gray-600">We design based on local material availability, helping you save on construction costs.</p>
+                <p className="text-sm text-gray-600">We design based on local material availability, helping you save on construction costs for both city and <strong>village homes</strong>.</p>
              </div>
              <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
                 <h4 className="font-bold text-blue-800 mb-2">Local Approval Ready</h4>
-                <p className="text-sm text-gray-600">All our plans meet the standards for RAJUK, CDA, KDA, and other city corporation approvals.</p>
+                <p className="text-sm text-gray-600">All our plans meet the standards for RAJUK, CDA, KDA, and other city corporation approvals across Bangladesh.</p>
              </div>
           </div>
         </div>

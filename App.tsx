@@ -17,7 +17,7 @@ const App: React.FC = () => {
     const metaDescriptions: Record<string, string> = {
       '/': 'Professional house design in Bangladesh. Expert modern home plans, duplex designs, and low cost house design in BD. Expert architects for Dhaka, Chattogram and Sylhet.',
       '/services': 'Modern house design services in Bangladesh: 3 bedroom house plans, luxury duplex designs, 1200 sq ft house plans, and 3D architectural rendering.',
-      '/portfolio': 'Portfolio of modern house designs in Bangladesh. 3D exterior visualizations, duplex house plans, and completed residential projects nationwide.',
+      '/portfolio': 'সেরা বাড়ির ডিজাইন পোর্টফোলিও। Explore modern duplex house designs, low cost 1200 sq ft house plans, 3 bedroom designs, and village house design in Bangladesh. অল্প খরচে সুন্দর বাড়ির ডিজাইন ও নকশা।',
       '/about': 'House Design BD is a leading architectural firm in Bangladesh. Specializing in low cost house design and modern residential planning for over 10 years.',
       '/contact': 'Get a free house design quote in Bangladesh. Contact us for 3 bedroom plans, duplex designs, and home blueprints today.'
     };
@@ -25,7 +25,7 @@ const App: React.FC = () => {
     const titles: Record<string, string> = {
       '/': 'House Design Services in Bangladesh | Modern & Low Cost Home Plans',
       '/services': '3 Bedroom House Plans & Duplex House Design BD | Services',
-      '/portfolio': 'Portfolio: 3D House Visualizations & Modern House Design Bangladesh',
+      '/portfolio': 'আধুনিক বাড়ির ডিজাইন | Portfolio: Duplex, Low Cost & Small House Design BD',
       '/about': 'About Us | Best Architects for House Design in Bangladesh',
       '/contact': 'Get a Quote | Best House Plan Design in Bangladesh'
     };

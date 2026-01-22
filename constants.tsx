@@ -14,6 +14,14 @@ export const SERVICES: Service[] = [
     image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80'
   },
   {
+    id: 'village-design',
+    title: 'Village House Design in Bangladesh (গ্রামের বাড়ির ডিজাইন)',
+    slug: 'village-house-design-bangladesh',
+    description: 'Specialized architectural plans for beautiful and functional homes in rural settings. We combine traditional Bangladeshi lifestyle needs with modern engineering to create cost-effective, durable, and climate-resilient village homes.',
+    benefits: ['Flood-resistant foundation planning', 'Natural cross-ventilation focus', 'Local material cost optimization'],
+    image: 'https://images.unsplash.com/photo-1590059132718-5ebce19b0561?auto=format&fit=crop&w=1200&q=80'
+  },
+  {
     id: 'floor-plan',
     title: 'Residential 3 Bedroom House Plan Design',
     slug: 'house-plan-design-bangladesh',
@@ -42,96 +50,82 @@ export const SERVICES: Service[] = [
 export const PORTFOLIO: PortfolioItem[] = [
   {
     id: 1,
-    title: "Luxury Duplex at Gulshan",
-    location: "Gulshan-2, Dhaka",
-    type: "Premium Duplex",
+    title: "ডুপ্লেক্স বাড়ির ডিজাইন (Luxury Duplex Design)",
+    location: "Gulshan, Dhaka",
+    type: "Modern Duplex",
     image: "https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=1200&q=80",
-    description: "A contemporary 5500 sqft duplex featuring a rooftop garden and double-height glass walls."
+    description: "Premium duplex house design in Bangladesh featuring 4 bedrooms, double-height living room, and a rooftop garden. Best for urban residential plots."
   },
   {
     id: 2,
-    title: "Modern 5-Storey Apartment",
+    title: "আধুনিক ৩ বেডরুমের বাড়ির নকশা (3 Bedroom Modern House)",
     location: "Nasirabad, Chattogram",
-    type: "Residential Building",
+    type: "Apartment Building",
     image: "https://images.unsplash.com/photo-1480074568708-e7b720bb3f09?auto=format&fit=crop&w=1200&q=80",
-    description: "Multi-unit residential design optimized for maximum rental income and natural ventilation."
+    description: "Modern house design Bangladesh for 5-storey residential buildings. Optimized for natural light and high ventilation in dense urban areas."
   },
   {
     id: 3,
-    title: "Eco-Friendly Villa in Sylhet",
-    location: "Zindabazar, Sylhet",
+    title: "Village House Design in Bangladesh (গ্রামের বাড়ির ডিজাইন)",
+    location: "Sreemangal, Sylhet",
     type: "Modern Villa",
     image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80",
-    description: "Utilizing traditional sloped roofs with modern materials to handle Sylhet's high rainfall."
+    description: "Functional and beautiful village house design in Bangladesh. Focused on affordability (Low Cost) and durable architectural materials."
   },
   {
     id: 4,
-    title: "Compact Urban Home",
+    title: "1200 sq ft House Plan (১২০০ স্কয়ার ফিট বাড়ির ডিজাইন)",
     location: "Uttara, Dhaka",
-    type: "Single Storey Modern",
+    type: "Single Storey",
     image: "https://images.unsplash.com/photo-1518780664697-55e3ad937233?auto=format&fit=crop&w=1200&q=80",
-    description: "A functional 3-bedroom home designed for a narrow 2.5-katha plot in a busy urban area."
+    description: "Small house design for a 2.5 katha plot. A low-cost 3-bedroom house plan design that maximizes space utility for middle-class families."
   },
   {
     id: 5,
-    title: "Suburban Retreat",
+    title: "অল্প খরচে সুন্দর বাড়ির ডিজাইন (Low Cost House Design)",
     location: "Khulna City",
-    type: "Duplex",
+    type: "Affordable Duplex",
     image: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=1200&q=80",
-    description: "Spacious suburban home focused on indoor-outdoor living with a private courtyard."
+    description: "Budget-friendly duplex house design BD. We provide detailed cost estimations (১০ লাখ টাকায় বাড়ি) and architectural drawings for sustainable living."
   },
   {
     id: 6,
-    title: "Classic Contemporary Home",
-    location: "Rajshahi Metropolitan",
+    title: "একতলা বাড়ির ডিজাইন (Single Story Modern Design)",
+    location: "Rajshahi",
     type: "Residential",
     image: "https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=1200&q=80",
-    description: "A blend of traditional brickwork and modern minimalist lines for a timeless look."
+    description: "Simple yet modern single-story house design in Bangladesh. Best for suburban and rural areas looking for minimalist aesthetics."
   }
 ];
 
 export const EXTERIOR_VISUALIZATIONS = [
   {
     id: 101,
-    title: "Twilight Facade Visualization",
+    title: "Modern Glass Facade - 3D Exterior Visualization",
     image: "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=1200&q=90",
     timeOfDay: "Twilight",
-    details: "High-end night lighting simulation with ray-traced reflections and glowing interior ambiance."
+    details: "High-end 3D architectural rendering for a luxury duplex house design in Bangladesh."
   },
   {
     id: 102,
-    title: "Modern Glass Duplex",
+    title: "Small House Design 3D Model (ছোট বাড়ির ডিজাইন)",
     image: "https://images.unsplash.com/photo-1613977257363-707ba9348227?auto=format&fit=crop&w=1200&q=90",
     timeOfDay: "Midday",
-    details: "Sunlight and shadow study showcasing heat-reflective glass and solar gain mitigation."
+    details: "3D visualization of a low-cost 3-bedroom house design for narrow urban plots."
   },
   {
     id: 103,
-    title: "Brutalist Urban Sanctuary",
+    title: "Premium Duplex Exterior Rendering",
     image: "https://images.unsplash.com/photo-1600607687940-c52af096999a?auto=format&fit=crop&w=1200&q=90",
     timeOfDay: "Overcast",
-    details: "Detailed texture mapping showing realistic raw concrete porosity and wet-season drainage."
+    details: "Architectural renderings for modern house designs in Bangladesh showing material textures."
   },
   {
     id: 104,
-    title: "Tropical Modern Estate",
+    title: "Village House Design 3D (গ্রামের আধুনিক বাড়ি)",
     image: "https://images.unsplash.com/photo-1512915922686-57c11dde9b6b?auto=format&fit=crop&w=1200&q=90",
     timeOfDay: "Morning",
-    details: "Soft diffused morning light highlighting architectural overhangs and natural ventilation gaps."
-  },
-  {
-    id: 105,
-    title: "Urban Minimalist Brick",
-    image: "https://images.unsplash.com/photo-1600585154526-990dcea4db0d?auto=format&fit=crop&w=1200&q=90",
-    timeOfDay: "Golden Hour",
-    details: "Warm spectrum rendering focusing on traditional brick textures and sharp minimalist lines."
-  },
-  {
-    id: 106,
-    title: "Luxury Lakeside Villa",
-    image: "https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=1200&q=90",
-    timeOfDay: "Sunset",
-    details: "Atmospheric scattering study during sunset, highlighting premium architectural silhouettes."
+    details: "Visualization of an eco-friendly villa suitable for rural settings in Bangladesh."
   }
 ];
 

@@ -5,55 +5,55 @@ import { PORTFOLIO, EXTERIOR_VISUALIZATIONS, WHATSAPP_NUMBER, BUSINESS_NAME } fr
 const Portfolio: React.FC = () => {
   return (
     <div className="bg-white min-h-screen">
-      {/* Header */}
+      {/* Header with SEO Title */}
       <div className="bg-gray-900 text-white pt-32 pb-24 px-4 relative overflow-hidden">
         <div className="absolute inset-0 opacity-20">
           <img 
             src="https://images.unsplash.com/photo-1480074568708-e7b720bb3f09?auto=format&fit=crop&w=1920&q=80" 
-            alt="Modern Architectural Projects and House Design in Bangladesh - Master Portfolio" 
+            alt="Best Modern House Design Bangladesh - Master Portfolio of Duplex and Residential Projects" 
             className="w-full h-full object-cover"
           />
         </div>
         <div className="max-w-7xl mx-auto text-center relative z-10">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight">Our Master Portfolio</h1>
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight">Master Portfolio: আধুনিক বাড়ির ডিজাইন</h1>
           <p className="text-blue-300 text-xl max-w-2xl mx-auto font-light">
-            Showcasing architectural excellence across Dhaka, Chattogram, Sylhet and every corner of Bangladesh.
+            Top-rated architectural renderings and <strong>modern house design in Bangladesh</strong>. Specialist in <strong>duplex house design BD</strong> and <strong>low cost home plans</strong>.
           </p>
         </div>
       </div>
 
-      {/* Stats Counter */}
+      {/* SEO Stats Counter */}
       <div className="max-w-7xl mx-auto px-4 -mt-10 relative z-20">
         <div className="bg-white shadow-2xl rounded-3xl p-8 grid grid-cols-1 md:grid-cols-3 gap-8 text-center border border-gray-100">
            <div>
               <p className="text-4xl font-extrabold text-blue-600">450+</p>
-              <p className="text-gray-500 font-bold uppercase tracking-widest text-xs mt-1">Duplex Designs</p>
+              <p className="text-gray-500 font-bold uppercase tracking-widest text-xs mt-1">Duplex Designs (ডুপ্লেক্স ডিজাইন)</p>
            </div>
            <div className="border-x border-gray-100">
               <p className="text-4xl font-extrabold text-blue-600">280+</p>
-              <p className="text-gray-500 font-bold uppercase tracking-widest text-xs mt-1">Commercial Units</p>
+              <p className="text-gray-500 font-bold uppercase tracking-widest text-xs mt-1">Village Houses (গ্রামের বাড়ি)</p>
            </div>
            <div>
               <p className="text-4xl font-extrabold text-blue-600">1.2k+</p>
-              <p className="text-gray-500 font-bold uppercase tracking-widest text-xs mt-1">Renderings Made</p>
+              <p className="text-gray-500 font-bold uppercase tracking-widest text-xs mt-1">3D Renderings (৩ডি ডিজাইন)</p>
            </div>
         </div>
       </div>
 
-      {/* Completed Projects Section */}
+      {/* Primary Portfolio Section */}
       <section className="py-24 px-4 max-w-7xl mx-auto">
         <div className="mb-16">
-          <h2 className="text-blue-600 font-black uppercase tracking-widest text-xs mb-4">Real Estate Development</h2>
-          <h3 className="text-3xl md:text-5xl font-bold text-gray-900 mb-2">Completed Masterpieces</h3>
+          <h2 className="text-blue-600 font-black uppercase tracking-widest text-xs mb-4">Architectural Excellence</h2>
+          <h3 className="text-3xl md:text-5xl font-bold text-gray-900 mb-2">Modern House Designs in Bangladesh</h3>
           <div className="w-20 h-1.5 bg-blue-600 mt-6 rounded-full"></div>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
           {PORTFOLIO.map((item) => (
-            <div key={item.id} className="group bg-white rounded-[40px] overflow-hidden shadow-lg border border-gray-50 flex flex-col transition-all hover:shadow-2xl">
+            <article key={item.id} className="group bg-white rounded-[40px] overflow-hidden shadow-lg border border-gray-50 flex flex-col transition-all hover:shadow-2xl">
               <div className="relative overflow-hidden h-72 bg-gray-100">
                 <img 
                   src={item.image} 
-                  alt={`${item.title} - Modern House Design in ${item.location}, Bangladesh`} 
+                  alt={`${item.title} - Modern House Design in ${item.location}, Bangladesh | ৩ডি বাড়ির ডিজাইন`} 
                   loading="lazy"
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" 
                 />
@@ -74,92 +74,105 @@ const Portfolio: React.FC = () => {
                   href={`https://wa.me/88${WHATSAPP_NUMBER}?text=I%20want%20to%20know%20more%20about%20the%20${item.title}%20design.`}
                   className="w-full text-center bg-gray-50 text-blue-600 py-4 rounded-2xl font-bold hover:bg-blue-600 hover:text-white transition-all text-sm border border-blue-50"
                 >
-                  Consult on this Design
+                  Get Quote for this Design
                 </a>
               </div>
-            </div>
+            </article>
           ))}
         </div>
       </section>
 
-      {/* 3D EXTERIOR VISUALIZATION SECTION - GRID RE-IMPLEMENTATION */}
+      {/* 3D Visualizations with Keyword Rich Badges */}
       <section className="py-32 px-4 bg-slate-950 text-white relative overflow-hidden">
-        {/* Decorative elements for distinction */}
-        <div className="absolute top-0 left-0 w-96 h-96 bg-blue-900/10 rounded-full -translate-x-1/2 -translate-y-1/2 blur-[120px]"></div>
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-blue-900/10 rounded-full translate-x-1/2 translate-y-1/2 blur-[120px]"></div>
-        
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="text-center mb-24">
-            <h2 className="text-blue-500 font-black uppercase tracking-[0.3em] text-xs mb-6">Photorealistic Experience</h2>
-            <h3 className="text-4xl md:text-6xl font-bold mb-8 tracking-tight">Cinematic 3D Visualizations</h3>
+            <h2 className="text-blue-500 font-black uppercase tracking-[0.3em] text-xs mb-6">৩ডি এক্সটেরিয়র ভিজ্যুয়ালাইজেশন</h2>
+            <h3 className="text-4xl md:text-6xl font-bold mb-8 tracking-tight">3D Architectural Renderings</h3>
             <p className="text-slate-400 max-w-3xl mx-auto text-lg md:text-xl leading-relaxed font-light">
-              Experience the future of Bangladeshi architecture with hyper-realistic 4K renderings. 
-              We utilize advanced ray-tracing, PBR materials, and photometric lighting to showcase your 
-              home under various atmospheric conditions.
+              Experience the best <strong>3D exterior visualization</strong> in Bangladesh. We provide hyper-realistic <strong>modern house designs</strong> for <strong>duplexes</strong>, <strong>single-storey homes</strong>, and <strong>low-cost housing projects</strong>.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10">
             {EXTERIOR_VISUALIZATIONS.map((viz) => (
-              <div key={viz.id} className="group bg-white/5 rounded-[32px] overflow-hidden border border-white/10 hover:border-blue-500/50 transition-all duration-500 flex flex-col">
-                <div className="relative h-72 overflow-hidden">
+              <div key={viz.id} className="group bg-white/5 rounded-[32px] overflow-hidden border border-white/10 hover:border-blue-500/50 transition-all duration-500 flex flex-col lg:flex-row">
+                <div className="relative w-full lg:w-1/2 h-72 lg:h-auto overflow-hidden">
                   <img 
                     src={viz.image} 
-                    alt={`${viz.title} - 3D Exterior Visualization of Modern House Design Bangladesh`} 
+                    alt={`${viz.title} - Best 3D Rendering & Architectural Design Bangladesh`} 
                     className="w-full h-full object-cover transition-transform duration-[1.5s] group-hover:scale-110"
                   />
-                  {/* Time of Day Badge */}
                   <div className="absolute top-4 left-4 bg-black/60 backdrop-blur-md px-4 py-1.5 rounded-full text-[10px] font-black uppercase tracking-widest text-blue-400 border border-white/10">
-                    {viz.timeOfDay || 'Architectural View'}
+                    {viz.timeOfDay} Rendering
                   </div>
-                  {/* Overlay for realism details */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-60"></div>
                 </div>
-                <div className="p-8 flex-grow flex flex-col">
+                <div className="p-8 lg:w-1/2 flex flex-col justify-center">
                   <h4 className="text-xl font-bold mb-4 text-white group-hover:text-blue-400 transition-colors">{viz.title}</h4>
-                  <p className="text-slate-400 text-sm leading-relaxed mb-8 flex-grow">
+                  <p className="text-slate-400 text-sm leading-relaxed mb-8">
                     {viz.details}
                   </p>
-                  <div className="flex items-center justify-between mt-auto pt-6 border-t border-white/10">
-                    <span className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">4K Rendering</span>
-                    <a 
-                      href={`https://wa.me/88${WHATSAPP_NUMBER}?text=I%20want%20to%20see%20more%203D%20renders%20like%20${viz.title}`}
-                      className="text-blue-500 hover:text-white text-xs font-bold uppercase tracking-widest flex items-center gap-2 transition-all"
-                    >
-                      Enlarge <span className="text-lg">⊕</span>
-                    </a>
-                  </div>
+                  <a 
+                    href={`https://wa.me/88${WHATSAPP_NUMBER}?text=Requesting%203D%20visualization%20details%20for%20${viz.title}`}
+                    className="text-blue-500 hover:text-white text-xs font-bold uppercase tracking-widest flex items-center gap-2 transition-all mt-auto"
+                  >
+                    View HD Model <span className="text-lg">→</span>
+                  </a>
                 </div>
               </div>
             ))}
           </div>
+        </div>
+      </section>
 
-          <div className="mt-24 text-center">
-            <div className="inline-block p-1 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-full">
-              <a 
-                href={`https://wa.me/88${WHATSAPP_NUMBER}?text=I%20want%20to%20order%20a%20full%203D%20visualization%20package.`}
-                className="block bg-slate-950 text-white px-12 py-5 rounded-full font-bold text-lg hover:bg-transparent transition-all"
-              >
-                Request Custom 3D Package
-              </a>
+      {/* Deep SEO Content Block for Portfolio Page */}
+      <section className="bg-gray-50 py-24 px-4">
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-white p-12 rounded-[50px] shadow-sm border border-gray-100">
+            <h2 className="text-3xl font-bold mb-8 text-slate-900 text-center">বাংলাদেশি বাড়ির ডিজাইন ও পরিকল্পনা নির্দেশিকা</h2>
+            <div className="prose prose-blue max-w-none text-gray-600 leading-relaxed">
+              <p>
+                আপনি কি আপনার জমিতে <strong>অল্প খরচে সুন্দর বাড়ির ডিজাইন</strong> করতে চাইছেন? {BUSINESS_NAME} বাংলাদেশের অন্যতম সেরা আর্কিটেকচারাল ফার্ম যা <strong>ডুপ্লেক্স বাড়ির ডিজাইন</strong> (Duplex House Design BD) এবং <strong>একতলা বাড়ির নকশা</strong> তৈরিতে বিশেষজ্ঞ। 
+              </p>
+              <p>
+                আমাদের পোর্টফোলিওতে রয়েছে <strong>৩ বেডরুমের বাড়ির নকশা</strong> এবং <strong>১২০০ স্কয়ার ফিট হাউজ প্ল্যান</strong> (1200 sq ft house plan) যা মধ্যবিত্ত পরিবারের বাজেট অনুযায়ী তৈরি। আমরা ঢাকা, চট্টগ্রাম, সিলেট সহ সারা বাংলাদেশে <strong>আধুনিক বাড়ির ডিজাইন</strong> (Modern House Design Bangladesh) প্রদান করছি।
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-10 not-prose">
+                <div className="p-6 bg-blue-50 rounded-2xl">
+                  <h4 className="font-bold text-blue-900 mb-2">Budget House Plans</h4>
+                  <p className="text-sm">১০ লাখ টাকায় বাড়ি বা ১৫ লাখ টাকায় ডুপ্লেক্স বাড়ির জন্য আমাদের সাশ্রয়ী প্ল্যানগুলো দেখুন।</p>
+                </div>
+                <div className="p-6 bg-blue-50 rounded-2xl">
+                  <h4 className="font-bold text-blue-900 mb-2">Village House Design</h4>
+                  <p className="text-sm">গ্রামের বাড়ির ডিজাইন - সুন্দর ও টেকসই বাড়ির প্ল্যান যা গ্রামের পরিবেশের সাথে সামঞ্জস্যপূর্ণ।</p>
+                </div>
+              </div>
+            </div>
+            
+            {/* Keyword Cluster Cloud */}
+            <div className="mt-12 pt-12 border-t border-gray-100">
+              <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-6 text-center">Search Keywords Index</p>
+              <div className="flex flex-wrap justify-center gap-3">
+                {["বাড়ির ডিজাইন", "অল্প খরচে সুন্দর বাড়ির ডিজাইন", "ডুপ্লেক্স বাড়ির ডিজাইন", "৩ বেডরুমের বাড়ির নকশা", "একতলা বাড়ির ডিজাইন", "Modern House Design Bangladesh", "House Plan Bangladesh", "Low Cost House BD", "Village House Design BD", "1200 sq ft House Plan", "Small House Design"].map(tag => (
+                  <span key={tag} className="px-4 py-2 bg-gray-100 text-[10px] font-bold text-gray-500 rounded-full border border-gray-200">
+                    {tag}
+                  </span>
+                ))}
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* SEO/Architectural Awareness */}
-      <section className="bg-gray-50 py-24 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-8 text-slate-900">Why Architecture Matters in Bangladesh</h2>
-          <p className="text-gray-600 text-lg leading-relaxed mb-10">
-            Our portfolio isn't just a collection of pictures; it's a testament to the safety, durability, and aesthetics of homes across Bangladesh. At {BUSINESS_NAME}, we take pride in being one of the top-rated <strong>house design services in Bangladesh</strong>. We ensure every line drawn translates into a secure, beautiful legacy for your family.
-          </p>
-          <div className="flex flex-wrap justify-center gap-6 text-[10px] font-black text-slate-400 uppercase tracking-[0.2em]">
-            <span className="bg-white px-6 py-3 rounded-full shadow-sm border border-gray-100">Modern Architecture</span>
-            <span className="bg-white px-6 py-3 rounded-full shadow-sm border border-gray-100">Duplex Specialist</span>
-            <span className="bg-white px-6 py-3 rounded-full shadow-sm border border-gray-100">Structural Safety</span>
-            <span className="bg-white px-6 py-3 rounded-full shadow-sm border border-gray-100">3D Visualization</span>
-          </div>
+      {/* Final CTA */}
+      <section className="py-24 px-4 text-center">
+        <h2 className="text-3xl font-bold mb-8">Ready to Design Your Dream Home?</h2>
+        <div className="flex flex-wrap justify-center gap-6">
+          <a href={`https://wa.me/88${WHATSAPP_NUMBER}`} className="bg-green-600 text-white px-10 py-5 rounded-full font-bold text-lg hover:bg-green-700 transition-all shadow-xl hover:scale-105">
+            Contact on WhatsApp
+          </a>
+          <a href="#/contact" className="bg-blue-600 text-white px-10 py-5 rounded-full font-bold text-lg hover:bg-blue-700 transition-all shadow-xl hover:scale-105">
+            Request Free Quote
+          </a>
         </div>
       </section>
     </div>

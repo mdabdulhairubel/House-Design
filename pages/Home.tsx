@@ -57,55 +57,114 @@ const Home: React.FC = () => {
         </div>
       </section>
 
-      {/* SEO Content: Detailed Search Intent Mapping */}
-      <section className="py-24 bg-gray-50 border-y">
-        <div className="max-w-5xl mx-auto px-4">
-           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-              <div>
-                 <h2 className="text-3xl font-bold mb-8 text-slate-900 leading-tight">অল্প খরচে সুন্দর বাড়ির ডিজাইন ও ডুপ্লেক্স প্ল্যান</h2>
-                 <p className="text-gray-600 text-lg leading-relaxed mb-6">
-                   আমরা দিচ্ছি বাংলাদেশের প্রেক্ষাপটে সবচেয়ে আধুনিক ও <strong>অল্প খরচে সুন্দর বাড়ির ডিজাইন</strong>। আপনি যদি গ্রামে বা শহরে আপনার স্বপ্নর বাড়িটি তৈরি করতে চান, তবে আমাদের <strong>৩ বেডরুমের বাড়ির নকশা</strong> এবং ১২০০ স্কয়ার ফিট হাউজ প্ল্যানগুলো আপনার পছন্দ হবেই।
-                 </p>
-                 <ul className="space-y-4 text-slate-700">
-                    <li className="flex items-center gap-3">
-                       <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
-                       <span>ডুপ্লেক্স বাড়ির ডিজাইন (Duplex House Design BD)</span>
-                    </li>
-                    <li className="flex items-center gap-3">
-                       <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
-                       <span>একতলা বাড়ির ডিজাইন (Single Story House Plan)</span>
-                    </li>
-                    <li className="flex items-center gap-3">
-                       <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
-                       <span>আধুনিক ৩ বেডরুমের বাড়ির নকশা</span>
-                    </li>
-                 </ul>
+      {/* SEO KEYWORD SECTION: Popular Search Categories & Paragraph */}
+      <section className="py-24 bg-gray-50 border-y border-gray-200">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+            
+            {/* Left Column: Semantic Keyword Paragraph */}
+            <div className="lg:col-span-7 flex flex-col justify-center">
+              <div className="mb-6">
+                <h2 className="text-blue-600 font-bold uppercase tracking-widest text-xs mb-3">Expert Design Resource</h2>
+                <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Complete Architectural Guide for Bangladesh</h3>
               </div>
-              <div className="bg-white p-8 rounded-[40px] shadow-xl border border-blue-50">
-                 <h3 className="text-xl font-bold mb-6 text-blue-900">Popular Search Categories</h3>
-                 <div className="flex flex-wrap gap-3">
-                    {["বাড়ির ডিজাইন", "House Design in Bangladesh", "Duplex House Design", "Low Cost House BD", "Village House Design", "3 Bedroom Plan", "1200 Sqft House", "Architect in Dhaka", "Modern Villa BD", "একতলা বাড়ির নকশা", "১০ লাখ টাকায় বাড়ি"].map((tag) => (
-                       <span key={tag} className="px-4 py-2 bg-gray-50 border border-gray-100 rounded-full text-xs font-bold text-gray-500 hover:text-blue-600 transition-colors">
-                          {tag}
-                       </span>
-                    ))}
-                 </div>
+              <div className="bg-white p-8 md:p-10 rounded-[40px] shadow-sm border border-gray-100">
+                <p className="text-gray-700 text-lg leading-relaxed text-justify">
+                  Welcome to <strong>House Design BD</strong>, your premier partner for <strong>Home Design Bangladesh</strong>. We specialize in <strong>Modern House Design Bangladesh</strong> and <strong>Residential House Design BD</strong>, offering expert <strong>House Plan Design Bangladesh</strong> services tailored to local needs. Whether you are looking for a <strong>Low Cost House Design</strong>, a compact <strong>Small House Design</strong>, or a specific <strong>1200 sq ft House Plan</strong>, our team delivers excellence for every family. We are renowned for our <strong>Village House Design in Bangladesh</strong>, focusing on beautiful <strong>একতলা বাড়ির ডিজাইন</strong> (Single-story house design) and functional <strong>৩ বেডরুমের বাড়ির নকশা</strong> (3 Bedroom house plan). If you dream of luxury, explore our <strong>ডুপ্লেক্স বাড়ির ডিজাইন</strong> (Duplex house design), including cost-optimized solutions like <strong>১০ লাখ টাকায় ডুপ্লেক্স বাড়ির ডিজাইন</strong>. Our mission is to provide the best <strong>বাড়ির ডিজাইন</strong> (House Design) and <strong>অল্প খরচে সুন্দর বাড়ির ডিজাইন</strong> (Beautiful house design at low cost) across Dhaka, Chattogram, and every village in Bangladesh.
+                </p>
+                <div className="mt-8 flex flex-wrap gap-4">
+                  <Link to="/portfolio" className="text-blue-600 font-bold hover:underline flex items-center gap-2">
+                    View Portfolio Projects <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
+                  </Link>
+                </div>
               </div>
+            </div>
+
+            {/* Right Column: Popular Search Categories Box */}
+            <div className="lg:col-span-5">
+              <div className="bg-slate-900 rounded-[40px] p-8 md:p-12 text-white shadow-2xl h-full relative overflow-hidden group">
+                <div className="absolute -top-10 -right-10 w-40 h-40 bg-blue-600/20 rounded-full blur-3xl group-hover:scale-150 transition-transform duration-1000"></div>
+                
+                <h3 className="text-2xl font-bold mb-8 flex items-center gap-3 relative z-10">
+                  <span className="w-8 h-8 bg-blue-500 rounded-lg flex items-center justify-center text-sm">
+                    <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
+                  </span>
+                  Popular Search Categories
+                </h3>
+
+                <div className="space-y-4 relative z-10">
+                  {[
+                    { label: "বাড়ির ডিজাইন (House Design)", volume: "High" },
+                    { label: "অল্প খরচে সুন্দর বাড়ির ডিজাইন", volume: "High" },
+                    { label: "ডুপ্লেক্স বাড়ির ডিজাইন", volume: "Trending" },
+                    { label: "৩ বেডরুমের বাড়ির নকশা", volume: "Popular" },
+                    { label: "একতলা বাড়ির ডিজাইন", volume: "Common" },
+                    { label: "Modern House Design Bangladesh", volume: "New" },
+                    { label: "Village House Design BD", volume: "Regional" },
+                    { label: "1200 sq ft House Plan", volume: "Standard" },
+                    { label: "১০ লাখ টাকায় ডুপ্লেক্স ডিজাইন", volume: "Budget" }
+                  ].map((category, idx) => (
+                    <div key={idx} className="flex items-center justify-between p-4 bg-white/5 rounded-2xl hover:bg-white/10 transition-colors border border-white/5 cursor-default group/item">
+                      <span className="text-sm font-semibold text-gray-200 group-hover/item:text-blue-400 transition-colors">{category.label}</span>
+                      <span className="text-[10px] font-black uppercase tracking-widest text-slate-500 bg-slate-800 px-3 py-1 rounded-full">{category.volume}</span>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="mt-10 pt-8 border-t border-white/10 text-center relative z-10">
+                  <p className="text-sm text-gray-400 italic mb-6">"Start your construction with the perfect plan."</p>
+                  <a 
+                    href={`https://wa.me/88${WHATSAPP_NUMBER}?text=I%20saw%20your%20popular%20search%20categories%20and%20want%20to%20consult%20for%20a%20new%20design.`}
+                    className="inline-block w-full bg-blue-600 hover:bg-blue-500 text-white py-4 rounded-2xl font-bold transition-all shadow-lg active:scale-95"
+                  >
+                    Free Consultation
+                  </a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* Stats Counter Section (Trust Signals) */}
+      <section className="py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
+           <div>
+              <p className="text-4xl md:text-5xl font-black text-blue-600 mb-2">10+</p>
+              <p className="text-xs font-bold uppercase tracking-widest text-gray-500">Years Experience</p>
+           </div>
+           <div>
+              <p className="text-4xl md:text-5xl font-black text-blue-600 mb-2">2500+</p>
+              <p className="text-xs font-bold uppercase tracking-widest text-gray-500">Designs Delivered</p>
+           </div>
+           <div>
+              <p className="text-4xl md:text-5xl font-black text-blue-600 mb-2">64</p>
+              <p className="text-xs font-bold uppercase tracking-widest text-gray-500">Districts Served</p>
+           </div>
+           <div>
+              <p className="text-4xl md:text-5xl font-black text-blue-600 mb-2">100%</p>
+              <p className="text-xs font-bold uppercase tracking-widest text-gray-500">Legal Compliance</p>
            </div>
         </div>
       </section>
 
       {/* Conversion Section */}
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-white px-4">
         <div className="max-w-6xl mx-auto rounded-[60px] bg-slate-950 p-12 md:p-24 text-center text-white relative overflow-hidden shadow-2xl">
           <div className="absolute top-0 right-0 w-80 h-80 bg-blue-600/20 rounded-full -mr-40 -mt-40 blur-3xl"></div>
           <h2 className="text-4xl md:text-6xl font-bold mb-8 tracking-tight relative z-10">Start Your Dream Home Today</h2>
           <p className="text-xl md:text-2xl mb-12 opacity-80 max-w-2xl mx-auto font-light relative z-10">
             Expert architects for your modern house design in Bangladesh. Affordable, structural, and stunning.
           </p>
-          <Link to="/contact" className="bg-blue-600 text-white px-12 py-5 rounded-full font-bold text-xl hover:bg-blue-700 transition-all shadow-xl relative z-10">
-            Request Free Quote
-          </Link>
+          <div className="flex flex-wrap justify-center gap-6 relative z-10">
+            <Link to="/contact" className="bg-blue-600 text-white px-12 py-5 rounded-full font-bold text-xl hover:bg-blue-700 transition-all shadow-xl">
+              Request Free Quote
+            </Link>
+            <a href={`https://wa.me/88${WHATSAPP_NUMBER}`} className="bg-green-600 text-white px-12 py-5 rounded-full font-bold text-xl hover:bg-green-700 transition-all shadow-xl">
+              Talk on WhatsApp
+            </a>
+          </div>
         </div>
       </section>
     </main>
