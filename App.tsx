@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Routes, Route, useLocation } from 'react-router-dom';
+import { Routes, Route, useLocation, Navigate } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import FloatingWhatsApp from './components/FloatingWhatsApp';
@@ -8,52 +8,62 @@ import Services from './pages/Services';
 import Portfolio from './pages/Portfolio';
 import About from './pages/About';
 import Contact from './pages/Contact';
+import Blog from './pages/Blog';
+import BlogPost from './pages/BlogPost';
+import { BLOG_POSTS } from './constants';
 
 const App: React.FC = () => {
   const { pathname } = useLocation();
 
-  // Dynamic SEO Metadata management
   useEffect(() => {
     const metaDescriptions: Record<string, string> = {
-      '/': 'Professional house design in Bangladesh. Expert modern home plans, duplex designs, and low cost house design in BD. Expert architects for Dhaka, Chattogram and Sylhet.',
-      '/services': 'Modern house design services in Bangladesh: 3 bedroom house plans, luxury duplex designs, 1200 sq ft house plans, and 3D architectural rendering.',
-      '/portfolio': 'সেরা বাড়ির ডিজাইন পোর্টফোলিও। Explore modern duplex house designs, low cost 1200 sq ft house plans, 3 bedroom designs, and village house design in Bangladesh. অল্প খরচে সুন্দর বাড়ির ডিজাইন ও নকশা।',
-      '/about': 'House Design BD is a leading architectural firm in Bangladesh. Specializing in low cost house design and modern residential planning for over 10 years.',
-      '/contact': 'Get a free house design quote in Bangladesh. Contact us for 3 bedroom plans, duplex designs, and home blueprints today.'
+      '/': 'House Design BD - Professional house design in Bangladesh. Expert modern home plans, duplex designs, and low cost house design in BD.',
+      '/services': 'Services by House Design BD: 3 bedroom house plans, luxury duplex designs, 1200 sq ft plans, and 3D architectural renderings.',
+      '/portfolio': 'House Design BD Portfolio: আধুনিক বাড়ির ডিজাইন। Explore modern duplex house designs in Bangladesh.',
+      '/blog': 'House Design BD Blog: Expert guides on house design in Bangladesh, costs, and architectural trends.',
+      '/about': 'About House Design BD - The leading architectural firm in Bangladesh for residential planning.',
+      '/contact': 'Contact House Design BD for a free quote. Best architects for house design in Dhaka.'
     };
 
     const titles: Record<string, string> = {
-      '/': 'House Design Services in Bangladesh | Modern & Low Cost Home Plans',
-      '/services': '3 Bedroom House Plans & Duplex House Design BD | Services',
-      '/portfolio': 'আধুনিক বাড়ির ডিজাইন | Portfolio: Duplex, Low Cost & Small House Design BD',
-      '/about': 'About Us | Best Architects for House Design in Bangladesh',
-      '/contact': 'Get a Quote | Best House Plan Design in Bangladesh'
+      '/': 'House Design BD | #1 House Design in Bangladesh | Modern & Low Cost',
+      '/services': 'House Design BD Services | Duplex & 3 Bedroom House Plans',
+      '/portfolio': 'House Design BD Portfolio | আধুনিক বাড়ির ডিজাইন ও নকশা',
+      '/blog': 'Blog | House Design BD - Tips & Guides for Building in Bangladesh',
+      '/about': 'About House Design BD | Expert Architects in Bangladesh',
+      '/contact': 'Contact House Design BD | Get Your Free Design Quote'
     };
 
-    const currentTitle = titles[pathname] || 'House Design BD | Professional Architecture in Bangladesh';
-    const currentDescription = metaDescriptions[pathname] || metaDescriptions['/'];
+    // Strip trailing slashes for matching
+    const normalizedPath = pathname === '/' ? '/' : pathname.replace(/\/$/, "");
+    
+    let currentTitle = titles[normalizedPath] || 'House Design BD';
+    let currentDescription = metaDescriptions[normalizedPath] || metaDescriptions['/'];
 
-    // Update Title
+    // Handle dynamic blog titles
+    if (normalizedPath.startsWith('/blog/')) {
+      const slug = normalizedPath.split('/').pop();
+      const post = BLOG_POSTS.find(p => p.slug === slug);
+      if (post) {
+        currentTitle = `${post.title} | House Design BD`;
+        currentDescription = post.excerpt;
+      }
+    }
+
     document.title = currentTitle;
 
-    // Update Meta Description
     const metaDescriptionTag = document.querySelector('meta[name="description"]');
     if (metaDescriptionTag) {
       metaDescriptionTag.setAttribute('content', currentDescription);
     }
 
-    // Update Open Graph tags
+    // Open Graph
     const ogTitleTag = document.querySelector('meta[property="og:title"]');
-    if (ogTitleTag) {
-      ogTitleTag.setAttribute('content', currentTitle);
-    }
+    if (ogTitleTag) ogTitleTag.setAttribute('content', currentTitle);
 
     const ogDescTag = document.querySelector('meta[property="og:description"]');
-    if (ogDescTag) {
-      ogDescTag.setAttribute('content', currentDescription);
-    }
+    if (ogDescTag) ogDescTag.setAttribute('content', currentDescription);
 
-    // Scroll to top
     window.scrollTo(0, 0);
   }, [pathname]);
 
@@ -65,8 +75,12 @@ const App: React.FC = () => {
           <Route path="/" element={<Home />} />
           <Route path="/services" element={<Services />} />
           <Route path="/portfolio" element={<Portfolio />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:slug" element={<BlogPost />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
+          {/* Catch-all route to handle unexpected paths by rendering Home directly */}
+          <Route path="*" element={<Home />} />
         </Routes>
       </div>
       <Footer />

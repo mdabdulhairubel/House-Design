@@ -24,3 +24,16 @@ export interface Testimonial {
   comment: string;
   rating: number;
 }
+
+export interface BlogPost {
+  id: string;
+  title: string;
+  slug: string;
+  excerpt: string;
+  content: string;
+  image: string;
+  date: string;
+  author: string;
+  category: string;
+  tags: string[];
+}

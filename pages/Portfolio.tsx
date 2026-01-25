@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { PORTFOLIO, EXTERIOR_VISUALIZATIONS, WHATSAPP_NUMBER, BUSINESS_NAME } from '../constants';
 
 const Portfolio: React.FC = () => {
@@ -131,7 +132,7 @@ const Portfolio: React.FC = () => {
             <h2 className="text-3xl font-bold mb-8 text-slate-900 text-center">বাংলাদেশি বাড়ির ডিজাইন ও পরিকল্পনা নির্দেশিকা</h2>
             <div className="prose prose-blue max-w-none text-gray-600 leading-relaxed">
               <p>
-                আপনি কি আপনার জমিতে <strong>অল্প খরচে সুন্দর বাড়ির ডিজাইন</strong> করতে চাইছেন? {BUSINESS_NAME} বাংলাদেশের অন্যতম সেরা আর্কিটেকচারাল ফার্ম যা <strong>ডুপ্লেক্স বাড়ির ডিজাইন</strong> (Duplex House Design BD) এবং <strong>একতলা বাড়ির নকশা</strong> তৈরিতে বিশেষজ্ঞ। 
+                আপনি কি আপনার জমিতে <strong>অল্প খরচে সুন্দর বাড়ির ডিজাইন</strong> করতে চাইছেন? {BUSINESS_NAME} বাংলাদেশের অন্যতম সেরা আর্কিটেকচারাল ফার্ম যা <strong>ডুপ্লেক্স বাড়ির ডিজাইন</strong> (Duplex House Design BD) and <strong>একতলা বাড়ির নকশা</strong> তৈরিতে বিশেষজ্ঞ। 
               </p>
               <p>
                 আমাদের পোর্টফোলিওতে রয়েছে <strong>৩ বেডরুমের বাড়ির নকশা</strong> এবং <strong>১২০০ স্কয়ার ফিট হাউজ প্ল্যান</strong> (1200 sq ft house plan) যা মধ্যবিত্ত পরিবারের বাজেট অনুযায়ী তৈরি। আমরা ঢাকা, চট্টগ্রাম, সিলেট সহ সারা বাংলাদেশে <strong>আধুনিক বাড়ির ডিজাইন</strong> (Modern House Design Bangladesh) প্রদান করছি।
@@ -170,9 +171,9 @@ const Portfolio: React.FC = () => {
           <a href={`https://wa.me/88${WHATSAPP_NUMBER}`} className="bg-green-600 text-white px-10 py-5 rounded-full font-bold text-lg hover:bg-green-700 transition-all shadow-xl hover:scale-105">
             Contact on WhatsApp
           </a>
-          <a href="#/contact" className="bg-blue-600 text-white px-10 py-5 rounded-full font-bold text-lg hover:bg-blue-700 transition-all shadow-xl hover:scale-105">
+          <Link to="/contact" className="bg-blue-600 text-white px-10 py-5 rounded-full font-bold text-lg hover:bg-blue-700 transition-all shadow-xl hover:scale-105">
             Request Free Quote
-          </a>
+          </Link>
         </div>
       </section>
     </div>
