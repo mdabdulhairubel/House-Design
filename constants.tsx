@@ -1,3 +1,4 @@
+
 import { Service, PortfolioItem, Testimonial } from './types';
 
 export const WHATSAPP_NUMBER = "01602300253";
@@ -104,28 +105,49 @@ export const EXTERIOR_VISUALIZATIONS = [
     title: "Modern Glass Facade - 3D Exterior Visualization",
     image: "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=1200&q=90",
     timeOfDay: "Twilight",
-    details: "High-end 3D architectural rendering for a luxury duplex house design in Bangladesh."
+    details: "High-end 3D architectural rendering for a luxury duplex house design in Bangladesh. Featuring soft twilight lighting and emissive interior glows."
   },
   {
     id: 102,
     title: "Small House Design 3D Model (ছোট বাড়ির ডিজাইন)",
     image: "https://images.unsplash.com/photo-1613977257363-707ba9348227?auto=format&fit=crop&w=1200&q=90",
     timeOfDay: "Midday",
-    details: "3D visualization of a low-cost 3-bedroom house design for narrow urban plots."
+    details: "3D visualization of a low-cost 3-bedroom house design for narrow urban plots. Harsh shadows emphasize depth and structural protrusions."
   },
   {
     id: 103,
     title: "Premium Duplex Exterior Rendering",
     image: "https://images.unsplash.com/photo-1600607687940-c52af096999a?auto=format&fit=crop&w=1200&q=90",
     timeOfDay: "Overcast",
-    details: "Architectural renderings for modern house designs in Bangladesh showing material textures."
+    details: "Architectural renderings for modern house designs in Bangladesh showing material textures like stone, wood, and aluminum cladding in soft light."
   },
   {
     id: 104,
     title: "Village House Design 3D (গ্রামের আধুনিক বাড়ি)",
     image: "https://images.unsplash.com/photo-1512915922686-57c11dde9b6b?auto=format&fit=crop&w=1200&q=90",
     timeOfDay: "Morning",
-    details: "Visualization of an eco-friendly villa suitable for rural settings in Bangladesh."
+    details: "Visualization of an eco-friendly villa suitable for rural settings in Bangladesh. Natural sunlight enhances the warm wood grain and concrete finish."
+  },
+  {
+    id: 105,
+    title: "Tropical Modern Home Design",
+    image: "https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1200&q=90",
+    timeOfDay: "High Noon",
+    details: "A tropical modern house design using sustainable wood louvers and exposed concrete for natural cooling. Sharp 4K rendering captures every texture detail."
+  },
+  {
+    id: 106,
+    title: "Luxury 6-Storey Residential Facade",
+    image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200&q=90",
+    timeOfDay: "Evening Lighting",
+    details: "Night-time architectural visualization showing LED strip lighting and glass balcony details for a modern urban apartment in Dhaka."
+  },
+  {
+    id: 107,
+    title: "Minimalist White Duplex Exterior",
+    image: "https://images.unsplash.com/photo-1512914890251-2f96a9b0bbe2?auto=format&fit=crop&w=1200&q=90",
+    timeOfDay: "Golden Hour",
+    details: "Clean minimalist lines with stark white finish and large floor-to-ceiling windows, optimized for panoramic views and sunset reflections."
   }
 ];
 
